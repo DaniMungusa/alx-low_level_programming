@@ -1,34 +1,20 @@
-#include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
+
 
 /**
- * _strdup - Write a function that returns a pointer to a newly allocated space in memory
- * contains a copy of the string given as a parameter
- * @str: string to copy
+ * main - Write a function that returns a pointer
  *
- * Return: Pointer
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: Always 0 (Success)
  */
-char *_strdup(char *str)
+
+int main(int argc, char *argv[])
 {
-	int l, i;
-	char *s;
+(void) argv; /*Ignore argv*/
+	printf("%d\n", argc - 1);
 
-	if (str == NULL)
-		return (0);
-
-	l = 0;
-	while (*(str + l))
-		l++;
-
-	s = malloc(sizeof(char) * l + 1);
-
-	if (s == 0)
-		return (0);
-
-	for (i = 0; i <= l; i++)
-	{
-		*(s + i) = *(str + i);
-	}
-	return (s);
+	return (0);
 }
